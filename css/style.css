@@ -480,6 +480,10 @@ body {
     display: block;
 }
 
+.modal-body p {
+    text-align: justify;
+}
+
 @keyframes openEnvelope {
     0% {
         transform: scaleY(0.2) translateY(-30px);

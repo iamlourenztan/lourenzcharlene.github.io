@@ -71,10 +71,13 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1030; /* Keeps the navbar above other elements */
+    z-index: 1030;
+    /* Keeps the navbar above other elements */
 }
+
 body {
-    padding-top: 80px; /* Adjust according to the navbar height */
+    padding-top: 80px;
+    /* Adjust according to the navbar height */
 }
 
 
@@ -270,10 +273,11 @@ body {
     left: 50%;
     transform: translateX(-50%);
     border: 30px solid;
-    border-color: transparent transparent #FFFFFF transparent;      
+    border-color: transparent transparent #FFFFFF transparent;
 }
 
 @media (min-width: 576px) {
+
     .flex-sm-row .team-img::after,
     .flex-lg-row-reverse .team-img::after {
         top: 50%;
@@ -297,6 +301,7 @@ body {
 }
 
 @media (min-width: 992px) {
+
     .flex-lg-row-reverse .team-img::after,
     .flex-sm-row-reverse .team-img::after {
         top: 50%;
@@ -416,8 +421,78 @@ body {
 }
 
 .zoom-thumbnail {
-        transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-thumbnail:hover {
+    transform: scale(0.95);
+}
+
+.envelope-container {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.envelope-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.envelope-btn {
+  min-width: 220px;
+  max-width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background: #f8f9fa;
+  border: 2px solid #d1d1d1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  margin-bottom: 0;
+}
+
+.envelope-btn .envelope-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.envelope-btn:focus,
+.envelope-btn:hover {
+  box-shadow: 0 0 0 2px #0d6efd33;
+  border-color: #0d6efd;
+}
+
+.letter-content {
+    text-align: justify;
+}
+
+.letter-content {
+  display: none;
+  margin-top: 16px;
+}
+
+.letter-content.open {
+    display: block;
+}
+
+@keyframes openEnvelope {
+    0% {
+        transform: scaleY(0.2) translateY(-30px);
+        opacity: 0;
     }
-    .zoom-thumbnail:hover {
-        transform: scale(0.95);
+
+    60% {
+        transform: scaleY(1.1) translateY(10px);
+        opacity: 0.7;
     }
+
+    100% {
+        transform: scaleY(1) translateY(0);
+        opacity: 1;
+    }
+}

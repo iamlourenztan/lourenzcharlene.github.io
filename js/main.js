@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -28,7 +28,7 @@
     $('#videoModal').on('hide.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc);
     })
-    
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -38,7 +38,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -59,25 +59,25 @@
         center: true,
         dots: false,
         nav: true,
-        navText : [
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ],
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:3
+            992: {
+                items: 3
             }
         }
     });
 
 
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
         let totalImages = 57;
         let imagePath = "img/hongkong/";
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
         let totalImages = 39;
         let imagePath = "img/cagayandeoro/";
 
@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.appendChild(linkElement);
         }
     });
-	
-document.addEventListener("DOMContentLoaded", function () {
+
+    document.addEventListener("DOMContentLoaded", function () {
         let totalImages = 64;
         let imagePath = "img/cebu/";
 
@@ -115,6 +115,47 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.appendChild(linkElement);
         }
     });
-    
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const envelopeBtns = document.querySelectorAll('.envelope-btn');
+        envelopeBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Hide all letters first
+                document.querySelectorAll('.letter-content').forEach(letter => {
+                    letter.classList.remove('open');
+                });
+                // Open the selected letter
+                const letterId = 'letter-' + btn.dataset.letter;
+                const letterContent = document.getElementById(letterId);
+                if (letterContent) {
+                    letterContent.classList.add('open');
+                }
+            });
+        });
+    });
+
+    document.querySelectorAll('.envelope-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var letterId = 'letter-' + btn.getAttribute('data-letter');
+            var letter = document.getElementById(letterId);
+
+            // Toggle visibility
+            if (letter.style.display === 'block') {
+                letter.style.display = 'none';
+            } else {
+                // Hide all other letters
+                document.querySelectorAll('.letter-content').forEach(function (l) {
+                    l.style.display = 'none';
+                });
+                letter.style.display = 'block';
+            }
+        });
+    });
+
+    // Hide all letters by default
+    document.querySelectorAll('.letter-content').forEach(function (l) {
+        l.style.display = 'none';
+    });
+
 })(jQuery);
 

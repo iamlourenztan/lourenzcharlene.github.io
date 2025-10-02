@@ -434,37 +434,37 @@ body {
 }
 
 .envelope-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
 }
 
 .envelope-btn {
-  min-width: 220px;
-  max-width: 250px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  background: #f8f9fa;
-  border: 2px solid #d1d1d1;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: box-shadow 0.2s;
-  margin-bottom: 0;
+    min-width: 220px;
+    max-width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background: #f8f9fa;
+    border: 2px solid #d1d1d1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    margin-bottom: 0;
 }
 
 .envelope-btn .envelope-icon {
-  font-size: 1.5rem;
-  margin-right: 10px;
+    font-size: 1.5rem;
+    margin-right: 10px;
 }
 
 .envelope-btn:focus,
 .envelope-btn:hover {
-  box-shadow: 0 0 0 2px #0d6efd33;
-  border-color: #0d6efd;
+    box-shadow: 0 0 0 2px #0d6efd33;
+    border-color: #0d6efd;
 }
 
 .letter-content {
@@ -472,8 +472,8 @@ body {
 }
 
 .letter-content {
-  display: none;
-  margin-top: 16px;
+    display: none;
+    margin-top: 16px;
 }
 
 .letter-content.open {

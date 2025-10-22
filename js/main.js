@@ -78,7 +78,7 @@
 
 
     document.addEventListener("DOMContentLoaded", function () {
-        let totalImages = 57;
+        let totalImages = 38;
         let imagePath = "img/hongkong/";
 
         for (let i = 2; i <= totalImages; i++) {
@@ -91,7 +91,7 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        let totalImages = 39;
+        let totalImages = 34;
         let imagePath = "img/cagayandeoro/";
 
         for (let i = 2; i <= totalImages; i++) {
@@ -104,7 +104,7 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        let totalImages = 64;
+        let totalImages = 49;
         let imagePath = "img/cebu/";
 
         for (let i = 2; i <= totalImages; i++) {

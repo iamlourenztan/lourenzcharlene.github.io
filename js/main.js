@@ -91,7 +91,7 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        let totalImages = 34;
+        let totalImages = 31;
         let imagePath = "img/cagayandeoro/";
 
         for (let i = 2; i <= totalImages; i++) {

@@ -82,7 +82,7 @@
         let imagePath = "img/hongkong/";
 
         for (let i = 2; i <= totalImages; i++) {
-            let imgSrc = `${imagePath}${i}.jpeg`;
+            let imgSrc = `${imagePath}${i}.jpg`;
             let linkElement = document.createElement("a");
             linkElement.href = imgSrc;
             linkElement.setAttribute("data-lightbox", "hongkong");
@@ -95,7 +95,7 @@
         let imagePath = "img/cagayandeoro/";
 
         for (let i = 2; i <= totalImages; i++) {
-            let imgSrc = `${imagePath}${i}.jpeg`;
+            let imgSrc = `${imagePath}${i}.jpg`;
             let linkElement = document.createElement("a");
             linkElement.href = imgSrc;
             linkElement.setAttribute("data-lightbox", "cagayandeoro");
@@ -108,7 +108,7 @@
         let imagePath = "img/cebu/";
 
         for (let i = 2; i <= totalImages; i++) {
-            let imgSrc = `${imagePath}${i}.jpeg`;
+            let imgSrc = `${imagePath}${i}.jpg`;
             let linkElement = document.createElement("a");
             linkElement.href = imgSrc;
             linkElement.setAttribute("data-lightbox", "cebu");
